@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Промоции</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ff4d6d;
+      padding: 15px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 120px;
+      transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd3e0;
+      transform: scale(1.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    p {
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .products ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .products ul li {
+      width: 320px;
+      background: #f8f8f8;
+      display: inline-block;
+      margin: 15px;
+      position: relative;
+      box-sizing: border-box;
+      vertical-align: top;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .products ul li figure {
+      margin: 0;
+      height: 300px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .products ul li figure img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .products ul li figure img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .price-box {
+      text-align: center;
+      padding: 10px 0 10px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 16px;
+    }
+
+    .new-price {
+      color: #ed1b24;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    .badge-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .badge {
+      background: #ed1b24;
+      color: white;
+      padding: 6px 10px;
+      font-size: 14px;
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .badge.orange {
+      background: #EFC3CA;
+    }
+
+    .badge.blue {
+      background: #00adee;
+    }
+
+    .badge.pink {
+      background: #CECECE;
+    }
+
+    .product-number {
+      font-weight: bold;
+      color: #e91e63;
+      padding-top: 10px;
+      font-size: 16px;
+    }
+
+    .product-btn {
+      margin-bottom: 20px;
+    }
+
+    .product-btn button {
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .product-btn button:hover {
+      background-color: #e94461;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #ff4d6d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="./pictures/GiftBlush_logo.png" alt="GiftBlush Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="about.html">За фирмата</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="promo.html">Промоция</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="author.html">Автор</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Промоции</h1>
+      <p>Възползвайте се от нашите атрактивни промоции и специални оферти, които ви предоставят уникални
+        възможности да спестите. Нашите текущи намаления включват продукти от различни категории с до 50%
+        отстъпка.</p>
+    </section>
+
+    <div class="products">
+      <ul>
+        <li>
+          <figure>
+            <img src="./pictures/mDQrLvwd1RKMyfd45yqP47T6sYtiPYKb_48265100323.webp" alt="Плюшена мечка">
+          </figure>
+          <div class="badge-overlay">
+            <span class="badge orange">Намаление 50%</span>
+          </div>
+          <div class="product-number">No 101</div>
+          <div class="price-box">
+            <span class="old-price">80лв.</span>
+            <span class="new-price">40лв.</span>
+          </div>
+          <div class="product-btn">
+            <button>Добави в количка</button>
+          </div>
+        </li>
+
+        <li>
+          <figure>
+            <img src="./pictures/sp300-300x400_0.jpg" alt="Цвете">
+          </figure>
+          <div class="badge-overlay">
+            <span class="badge blue">Намаление 20%</span>
+          </div>
+          <div class="product-number">No 203</div>
+          <div class="price-box">
+            <span class="old-price">70лв.</span>
+            <span class="new-price">56лв.</span>
+          </div>
+          <div class="product-btn">
+            <button>Добави в количка</button>
+          </div>
+        </li>
+
+        <li>
+          <figure>
+            <img src="./pictures/res_b2e8b3bb50b3b523be0fffd76f98965a.webp" alt="Кутия за подарък">
+          </figure>
+          <div class="badge-overlay">
+            <span class="badge pink">Намаление 10%</span>
+          </div>
+          <div class="product-number">No 301</div>
+          <div class="price-box">
+            <span class="old-price">80лв.</span>
+            <span class="new-price">72лв.</span>
+          </div>
+          <div class="product-btn">
+            <button>Добави в количка</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Фирмен уебсайт. Всички права запазени.</p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>За фирмата</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff0f5;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ff4d6d;
+            padding: 15px 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 80px;
+            transition: transform 0.3s;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd3e0;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h1 {
+            color: #ff4d6d;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .company-info {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .company-info p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Мисия - Визия - Ценности */
+        .core-values {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .value-box {
+            max-width: 200px;
+        }
+
+        .value-box span {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .value-box h3 {
+            color: #ff4d6d;
+            margin-bottom: 10px;
+        }
+
+        .value-box p {
+            font-size: 16px;
+        }
+
+        /* Хронология */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 15px;
+            width: 5px;
+            height: 100%;
+            background: #ff4d6d;
+            border-radius: 2px;
+        }
+
+        .timeline-event {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+
+        .timeline-event::before {
+            position: absolute;
+            left: -15px;
+            top: 0;
+            font-size: 22px;
+        }
+
+        .timeline-event:nth-child(1)::before { content: '💡'; }
+        .timeline-event:nth-child(2)::before { content: '🛍️'; }
+        .timeline-event:nth-child(3)::before { content: '👥'; }
+        .timeline-event:nth-child(4)::before { content: '🏆'; }
+        .timeline-event:nth-child(5)::before { content: '🌍'; }
+
+        .timeline-event h3 {
+            margin: 0 0 5px;
+            color: #ff4d6d;
+            font-size: 20px;
+        }
+
+        .timeline-event p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        footer {
+            background: #ff4d6d;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./pictures/GiftBlush_logo.png" alt="GiftBlush Лого">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="about.html">За фирмата</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="promo.html">Промоция</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="author.html">Автор</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>За фирмата</h1>
+            <div class="company-info">
+                <p>GiftBlush е вдъхновена от желанието да дарим емоция, не просто продукт. Създадохме компанията с идеята да предлагаме стилни, персонализирани и запомнящи се подаръци за всеки повод.</p>
+                <p>Ние вярваме, че всеки подарък е история – затова внимателно избираме всеки артикул, опаковка и детайл. Нашият екип от креативни професионалисти се стреми да направи всяка поръчка специална.</p>
+                <p>С грижа към клиента и страст към дизайна, създаваме подаръци, които усмихват и вдъхновяват.</p>
+            </div>
+
+            <!-- Мисия, Визия, Ценности -->
+            <div class="core-values">
+                <div class="value-box">
+                    <span>🎯</span>
+                    <h3>Мисия</h3>
+                    <p>Да вдъхновяваме чрез персонализирани подаръци, изпълнени с емоция.</p>
+                </div>
+                <div class="value-box">
+                    <span>👁️</span>
+                    <h3>Визия</h3>
+                    <p>Да бъдем водеща марка в създаването на запомнящи се подаръчни изживявания.</p>
+                </div>
+                <div class="value-box">
+                    <span>💖</span>
+                    <h3>Ценности</h3>
+                    <p>Креативност, внимание към детайла и лично отношение към всеки клиент.</p>
+                </div>
+            </div>
+
+            <h2 style="text-align:center; color:#ff4d6d;">История на развитие</h2>
+            <div class="timeline">
+                <div class="timeline-event">
+                    <h3>2021 – Идеята се ражда</h3>
+                    <p>Основателката на GiftBlush решава да превърне хобито си по опаковане и създаване на креативни подаръци в бизнес.</p>
+                </div>
+                <div class="timeline-event">
+                    <h3>2022 – Първите клиенти</h3>
+                    <p>Създадохме първия ни онлайн магазин и започнахме работа по персонализирани поръчки.</p>
+                </div>
+                <div class="timeline-event">
+                    <h3>2023 – Разширяване на екипа</h3>
+                    <p>Привлякохме още креативни личности, отворихме първото ни физическо ателие и стартирахме корпоративни партньорства.</p>
+                </div>
+                <div class="timeline-event">
+                    <h3>2024 – Признание и нови идеи</h3>
+                    <p>GiftBlush получи награда за "Най-креативен млад бизнес". Създадохме нови продуктови линии и абонаментни кутии.</p>
+                </div>
+                <div class="timeline-event">
+                    <h3>2025 – Поглед към бъдещето</h3>
+                    <p>Планираме международна експанзия и въвеждане на екологични решения в производството.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GiftBlush. Всички права запазени.</p>
+    </footer>
+</body>
+
+</html>
+

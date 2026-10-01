@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GiftBlush - Магията на подаръка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffeef2);
+      margin: 0;
+      padding: 0;
+      color: #ff4d6d;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ff4d6d;
+      padding: 15px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 100px;
+      transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd3e0;
+      transform: scale(1.1);
+    }
+
+    .hero-section {
+      background: url('https://images.unsplash.com/photo-1585386959984-a4155224a1c2?auto=format&fit=crop&w=1400&q=80') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #ff4d6d;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+      color: #000;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #ff4d6d;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #ffe0ec;
+      transform: scale(1.05);
+    }
+
+    .about-section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .about-section p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    .how-it-works {
+      padding: 50px 20px;
+      background-color: #fff6fa;
+      text-align: center;
+    }
+
+    .how-it-works h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .step {
+      max-width: 280px;
+    }
+
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #ff4d6d;
+    }
+
+    .step p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .icon {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .step:hover .icon {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    .subscribe-section {
+      background-color: #ffe0ec;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .subscribe-section h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .subscribe-section input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    .subscribe-section button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ff4d6d;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .faq-section {
+      background-color: #fff6fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .faq-section h2 {
+      color: #ff4d6d;
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
+
+    .faq-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .faq-question {
+      padding: 18px 24px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #ff4d6d;
+      position: relative;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .faq-answer {
+      padding: 0 24px 18px;
+      color: #333;
+      display: none;
+    }
+
+    .faq-item input {
+      display: none;
+    }
+
+    .faq-item input:checked ~ .faq-answer {
+      display: block;
+    }
+
+    .faq-item input:checked ~ .faq-question::after {
+      content: "-";
+    }
+
+    .faq-question::after {
+      content: "+";
+      position: absolute;
+      right: 24px;
+      font-size: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ff4d6d;
+      transition: 0.3s ease;
+    }
+
+    footer {
+      background-color: #ff4d6d;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="./pictures/GiftBlush_logo.png" alt="GiftBlush лого">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="about.html">За фирмата</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="promo.html">Промоция</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="author.html">Автор</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-section" data-aos="fade-up">
+    <div class="hero-text">
+      <h1>Подари усмивка с GiftBlush</h1>
+      <p>Избери перфектния подарък за любимите хора – с нежност, стил и внимание към детайла.</p>
+      <a href="catalog.html" class="btn">Разгледай каталога</a>
+    </div>
+  </section>
+
+  <section class="about-section" data-aos="fade-up">
+    <h2>Магията на персоналния подарък</h2>
+    <p>
+      В GiftBlush вярваме, че всеки подарък е история. Затова създаваме специални, ръчно подбрани артикули, които съчетават красота, емоция и лично отношение.
+      От празнични кутии, луксозни аксесоари, до тематични комплекти за рожден ден, сватба или специален повод – ние предлагаме нещо повече от вещ: предлагаме преживяване.
+      Избери GiftBlush, когато искаш да изразиш любов, благодарност или внимание – по най-красивия начин.
+    </p>
+  </section>
+
+  <section class="how-it-works" data-aos="fade-up">
+    <h2>Как работи GiftBlush?</h2>
+    <div class="steps">
+      <div class="step">
+        <i class="fas fa-gift fa-2x icon"></i>
+        <h3>1. Избери подарък</h3>
+        <p>Разгледай нашия красив каталог с подбрани предложения.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-pencil-alt fa-2x icon"></i>
+        <h3>2. Персонализирай</h3>
+        <p>Добави послание и избери опаковка според повода.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-truck fa-2x icon"></i>
+        <h3>3. Получи с любов</h3>
+        <p>Доставяме бързо и грижовно до твоята врата.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe-section" data-aos="fade-up">
+    <h2>Абонирай се за новини и получи 10% отстъпка</h2>
+    <form>
+      <input type="email" placeholder="Въведи имейл" required>
+      <button type="submit">Абонирай се</button>
+    </form>
+  </section>
+
+  <section class="faq-section" data-aos="fade-up">
+    <h2>Често задавани въпроси</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <input type="checkbox" id="faq1">
+        <label class="faq-question" for="faq1">Колко бързо е доставката?</label>
+        <div class="faq-answer">
+          <p>Доставяме в рамките на 1-3 работни дни, в зависимост от населеното място.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq2">
+        <label class="faq-question" for="faq2">Мога ли да добавя лично послание?</label>
+        <div class="faq-answer">
+          <p>Разбира се! Персоналните послания са част от нашата магия.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq3">
+        <label class="faq-question" for="faq3">Какви методи на плащане предлагате?</label>
+        <div class="faq-answer">
+          <p>Можеш да платиш с карта, наложен платеж или по банков път.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 GiftBlush – Всички права запазени.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+
+
+

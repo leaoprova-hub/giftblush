@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fffafc;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ff4d6d;
+      padding: 15px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 120px;
+      transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd3e0;
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff4d6d;
+      color: white;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+  
+    .contact-box { max-width: 600px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .contact-box h1 { color: #ff4d6d; text-align: center; margin-top: 0; }
+    .contact-box label { display: block; margin: 15px 0 5px; font-weight: bold; }
+    .contact-box input, .contact-box textarea { width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #ffb6c1; border-radius: 10px; font-family: inherit; font-size: 16px; }
+    .contact-box button { margin-top: 20px; background-color: #ff4d6d; color: white; border: none; padding: 12px 28px; border-radius: 25px; font-weight: bold; font-size: 16px; cursor: pointer; }
+    .contact-box button:hover { background-color: #e91e63; }
+    .notice { padding: 12px; border-radius: 10px; margin-bottom: 10px; display: none; text-align: center; }
+    .notice.ok { background: #e6f7ec; color: #1b6b3a; }
+    .notice.err { background: #fde8ec; color: #a1233b; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./pictures/GiftBlush_logo.png" alt="GiftBlush лого">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="about.html">За фирмата</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="promo.html">Промоция</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="author.html">Автор</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-box">
+      <h1>Контакти</h1>
+      <div id="ok" class="notice ok">Благодарим! Съобщението е изпратено.</div>
+      <div id="err" class="notice err">Възникна проблем. Моля, проверете данните и опитайте отново.</div>
+      <form action="submit_form.php" method="POST">
+        <label for="name">Име</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Имейл</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Съобщение</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Изпрати</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GiftBlush. Всички права запазени.</p>
+  </footer>
+
+  <script>
+    var p = new URLSearchParams(window.location.search);
+    if (p.get("sent")) document.getElementById("ok").style.display = "block";
+    if (p.get("error")) document.getElementById("err").style.display = "block";
+  </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>За автора</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff3f8;
+        }
+
+
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .author-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .author-container img {
+            width: 280px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-info p {
+            margin: 0 0 10px;
+        }
+
+        .contact-link, .phone-number {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .projects {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects summary {
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .events {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .event {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #ffe6ef;
+            border-left: 5px solid #ff80ab;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #ff4d6d;
+            color: white;
+        }
+        header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ff4d6d;
+      padding: 15px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 120px;
+      transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd3e0;
+      transform: scale(1.1);
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="pictures/GiftBlush_logo.png" alt="Лого на фирмата">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="about.html">За фирмата</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="promo.html">Промоция</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="author.html">Автор</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>За автора</h1>
+            <div class="author-container">
+                <img src="pictures/Imageauthor.jpg" alt="Снимка на автора">
+                <div class="author-info">
+                    <p>Този уебсайт е създаден от Леа Опрова, уеб разработчик с опит в създаването на динамични и интуитивни уеб приложения. Моята основна цел е да предоставя качествени решения, които не само да удовлетворяват нуждите на клиента, но и да създават уникално потребителско изживяване.</p>
+                    <p>Работя с разнообразни технологии, като HTML, CSS, JavaScript, PHP, MySQL и други, за да реализирам проекти, които са както функционални, така и визуално привлекателни. Ако искате да научите повече за мен или да разгледате други мои проекти, можете да се свържете с мен директно чрез контактната форма.</p>
+                    <p><strong>Контакти:</strong>
+                        <a class="contact-link" href="https://www.instagram.com/lyudmilova__" target="_blank">@lyudmilova__</a>
+                        <span class="phone-number">Телефон: +359876189230</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <details>
+                <summary>Реализирани проекти</summary>
+                <div class="project-gallery">
+                    <img src="pictures/Image.jpg" alt="Проект 1">
+                    <img src="pictures/Image.png" alt="Проект 2">
+                    <img src="pictures/Image__2_.jpg" alt="Проект 3">
+                </div>
+            </details>
+        </section>
+
+        <section class="events">
+            <h2>Интерактивна информация</h2>
+            <div class="event">
+                <strong>Събитие 1:</strong> Спечелване на диплома в интернационална фирма "Кирби" за постижения в дигиталния маркетинг и уеб технологии.
+            </div>
+            <div class="event">
+                <strong>Събитие 2:</strong> Участие в интернационално състезание "Най-добра бизнес идея" с интерактивна бизнес инициатива за бъдещето.
+            </div>
+            <div class="event">
+                <strong>Събитие 3:</strong> Успешно организиране на младежки семинар на тема "Технологии и креативност" с над 150 участници.
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Фирмен уебсайт. Всички права запазени.</p>
+    </footer>
+</body>
+
+</html>
+

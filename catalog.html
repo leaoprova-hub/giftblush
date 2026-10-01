@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fffafc;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ff4d6d;
+      padding: 15px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 120px;
+      transition: transform 0.3s;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd3e0;
+      transform: scale(1.1);
+    }
+
+    .catalog-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    details {
+      margin-bottom: 30px;
+      border: 2px solid #ffb6c1;
+      border-radius: 10px;
+      background-color: #fff0f5;
+      padding: 10px 20px;
+    }
+
+    summary {
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #e91e63;
+      padding: 10px 0;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .product {
+      min-width: 250px;
+      max-width: 250px;
+      flex-shrink: 0;
+      padding: 15px;
+      text-align: center;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      border: 1px solid #ffc0cb;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 5px solid #e91e63;
+      padding: 5px;
+      background-color: white;
+    }
+
+    .product p {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .product button {
+      margin-top: 10px;
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .product button:hover {
+      background-color: #e91e63;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff4d6d;
+      color: white;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="./pictures/GiftBlush_logo.png" alt="GiftBlush лого">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="about.html">За фирмата</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="promo.html">Промоция</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="author.html">Автор</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="catalog-container">
+
+      <details open>
+        <summary>За деца</summary>
+        <div class="products">
+          <div class="product">
+            <img src="./pictures/mDQrLvwd1RKMyfd45yqP47T6sYtiPYKb_48265100323.webp" alt="Плюшена мечка">
+            <p>No 101<br>Плюшена мечка - 80лв.</p>
+            <button>Добави в количка</button>
+          </div>
+          <div class="product">
+            <img src="./pictures/026D1E8B-5550-4D3D-A564-10E48AEEE280.jpeg" alt="Кутия-изненада">
+            <p>No 102<br>Кутия-изненада - 60лв.</p>
+            <button>Добави в количка</button>
+          </div>
+          <div class="product">
+            <img src="./pictures/2102928322.jpg" alt="Кутия за играчки">
+            <p>No 103<br>Кутия за играчки - 50лв.</p>
+            <button>Добави в количка</button>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>За жени</summary>
+        <div class="products">
+          <div class="product">
+            <img src="./pictures/2716_bizhu-ss-srtse-v-kutiya-za-bi.jpg" alt="Бижу в кутия">
+            <p>No 201<br>Бижу в кутия - 50лв.</p>
+            <button>Добави в количка</button>
+          </div>
+          <div class="product">
+            <img src="./pictures/20626-2-2-1-1600x1200.jpg" alt="Букет от сапунени рози">
+            <p>No 202<br>Букет от сапунени рози - 60лв.</p>
+            <button>Добави в количка</button>
+          </div>
+          <div class="product">
+            <img src="./pictures/sp300-300x400_0.jpg" alt="Стъклено цвете">
+            <p>No 203<br>Стъклено цвете - 70лв.</p>
+            <button>Добави в количка</button>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>За мъже</summary>
+        <div class="products">
+          <div class="product">
+            <img src="./pictures/res_b2e8b3bb50b3b523be0fffd76f98965a.webp" alt="Лукс кутия">
+            <p>No 301<br>Лукс кутия - 80лв.</p>
+            <button>Добави в количка</button>
+          </div>
+          <div class="product">
+            <img src="./pictures/product-54672-1600x1600.webp" alt="Уникален шах">
+            <p>No 302<br>Уникален шах - 70лв.</p>
+            <button>Добави в количка</button>
+          </div>
+          <div class="product">
+            <img src="./pictures/dekanter-s-postavka-diamant-podaruk-350x350.jpg" alt="Стъклена бутилка диамант">
+            <p>No 303<br>Стъклена бутилка диамант - 50лв.</p>
+            <button>Добави в количка</button>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Фирмен уебсайт. Всички права запазени.</p>
+  </footer>
+</body>
+</html>
